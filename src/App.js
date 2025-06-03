@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import SearchBar from './components/SearchBar';
+import EventCard from './components/EventCard';
+import './components/styles/App.css';
 
 function App() {
+  const [events, setEvents] = useState([]);
+  const [filteredEvents, setFilteredEvents] = useState([]);
+
+  useEffect(() => {
+    import('./data/events.json').then(data => {
+      setEvents(data.default);
+      setFilteredEvents(data.default);
+    });
+  }, []);
+
+  const handleSearch = (query) => {
+    const filtered = events.filter(event =>
+      event.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredEvents(filtered);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <Hero />
+      <div className="container">
+        <SearchBar onSearch={handleSearch} />
+        <h2 id="events">Featured Events</h2>
+        <div className="events-grid">
+          {filteredEvents.map(event => (
+            <EventCard key={event.id} event={event} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

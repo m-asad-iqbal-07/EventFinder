@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "IT Expo Lahore 2024",
+    "date": "August 10, 2024",
+    "time": "9:00 AM",
+    "location": "Expo Center, Lahore",
+    "description": "Pakistan's biggest IT event with tech leaders and innovators."
+  },
+  {
+    "id": 2,
+    "name": "Music Mela Islamabad",
+    "date": "September 5, 2024",
+    "time": "6:00 PM",
+    "location": "F-9 Park, Islamabad",
+    "description": "Enjoy a night of soulful performances by Pakistani artists."
+  },
+  {
+    "id": 3,
+    "name": "Startup Grind Karachi",
+    "date": "July 20, 2024",
+    "time": "3:00 PM",
+    "location": "NEST I/O, Karachi",
+    "description": "Meet startup founders and venture capitalists."
+  },
+  {
+    "id": 4,
+    "name": "AgriTech Expo Faisalabad",
+    "date": "October 3, 2024",
+    "time": "11:00 AM",
+    "location": "Agriculture University, Faisalabad",
+    "description": "Explore the future of smart farming and agri innovations."
+  },
+  {
+    "id": 5,
+    "name": "Youth Leadership Summit",
+    "date": "August 25, 2024",
+    "time": "10:30 AM",
+    "location": "University of Punjab, Lahore",
+    "description": "Inspire and empower the youth of Pakistan."
+  },
+  {
+    "id": 6,
+    "name": "Women in Tech Conference",
+    "date": "September 12, 2024",
+    "time": "2:00 PM",
+    "location": "TechHub, Peshawar",
+    "description": "Celebrating the women leaders in Pakistan's tech industry."
+  }
+]
